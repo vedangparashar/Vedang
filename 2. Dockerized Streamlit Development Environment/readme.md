@@ -116,7 +116,7 @@ docker run -p 8501:8501 streamlit-app
 ## 🎯 **Conclusion**  
 You now have a **fully functional Streamlit environment** running inside Docker! 🚀  
 
-![Streamlit App Screenshot](hhttps://github.com/vedangparashar/Vedang/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/Images/Screenshot%202025-02-19%20013824.png)
+![Streamlit App Screenshot](https://github.com/vedangparashar/Vedang/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/Images/Screenshot%202025-02-19%20013824.png)
 ![Streamlit App Screenshot](https://github.com/vedangparashar/Vedang/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/Images/Screenshot%202025-02-19%20013835.png)
 ![Streamlit App Screenshot](https://github.com/vedangparashar/Vedang/blob/main/2.%20Dockerized%20Streamlit%20Development%20Environment/Images/Screenshot%202025-02-19%20013853.png)
 
