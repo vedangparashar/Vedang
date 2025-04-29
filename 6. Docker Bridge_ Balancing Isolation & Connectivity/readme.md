@@ -82,7 +82,7 @@ We add another container (`Vedang-server-B`) on the **default bridge network**.
 ```bash
 docker run -itd --name=Vedang-server-B busybox
 ```
-### 📌 Get IP of `Kunal-server-B`
+### 📌 Get IP of `Vedang-server-B`
 ```bash
 docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' Vedang-server-B
 ```
