@@ -201,7 +201,7 @@ http://localhost:8080
 
 Expected output:
 ```
-API Gateway: Vidhi Jaju
+API Gateway:vedang
 ```
 ![img](https://github.com/vedangparashar/Vedang/blob/main/12.%20Microservices%20Architecture%20using%20Docker%20Swarm/assets/web_output.png)
 
