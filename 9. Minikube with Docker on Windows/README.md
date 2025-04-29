@@ -57,14 +57,14 @@ Verify installation:
 ```bash
 kubectl version --client
 ```
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/1.png)
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/2.png)
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/2.png)
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/4.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/1.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/2.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/2.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/4.png)
 
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/5.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/5.png)
 
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/6.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/6.png)
 
 ---
 
@@ -82,7 +82,7 @@ Check the status:
 ```bash
 minikube status
 ```
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/7.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/7.png)
 
 ---
 
@@ -106,7 +106,7 @@ minikube service nginx --url
 ```
 Open the URL in your browser to see the running nginx web server. 🌐
 
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/8.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/8.png)
 
 ---
 
@@ -132,7 +132,7 @@ kubectl get pods
 kubectl delete service nginx
 kubectl delete deployment nginx
 ```
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/9.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/9.png)
 
 ---
 
@@ -148,7 +148,7 @@ minikube stop
 minikube delete
 ```
 This removes all Kubernetes resources.
-![image](https://github.com/Kunal5520254/DockSpace-main/blob/main/DockSpace-main/9.%20Minikube%20with%20Docker%20on%20Windows/images/10.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/9.%20Minikube%20with%20Docker%20on%20Windows/images/10.png)
 
 ---
 
