@@ -131,7 +131,7 @@ docker run -p 8501:8501 evidently-streamlit
 
 Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-![image](https://github.com/vansh1306/Docker_Work/blob/main/8.%20Evidently%20AI%20Sets%20Sail%20in%20Docker/image.png)
+![image](https://github.com/vedangparashar/Vedang/blob/main/8.%20Evidently%20AI%20Sets%20Sail%20in%20Docker/img1.png)
 
 ---
 
