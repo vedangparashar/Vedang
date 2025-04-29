@@ -27,13 +27,13 @@ A **custom bridge network** offers several advantages:
 ✅ **DNS-Based Resolution** – Containers communicate via names instead of IPs.
 ✅ **Greater Control** – Define specific **subnets, IP ranges, and gateways**.
 
-To demonstrate, we create a **custom bridge network** called `Kunal-bridge` and connect multiple containers.
+To demonstrate, we create a **custom bridge network** called `Vedang-bridge` and connect multiple containers.
 
 ---
 
 ## 🔧 1. Creating a Custom Bridge Network
 ```bash
-docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 Kunal-bridge
+docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 Vedang-bridge
 ```
 ### 🔍 Explanation:
 - `--driver bridge` → Uses the default **bridge network mode**.
@@ -43,57 +43,57 @@ docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.2
 ---
 
 ## 🚀 2. Running Containers in the Custom Network
-### Running **Redis Container** (`Kunal-database`)
+### Running **Redis Container** (`Vedang-database`)
 ```bash
-docker run -itd --net=Kunal-bridge --name=Kunal-database redis
+docker run -itd --net=Vedang-bridge --name=Vedang-database redis
 ```
-### Running **BusyBox Container** (`Kunal-server-A`)
+### Running **BusyBox Container** (`Vedang-server-A`)
 ```bash
-docker run -itd --net=Kunal-bridge --name=Kunal-server-A busybox
+docker run -itd --net=Vedang-bridge --name=Vedang-server-A busybox
 ```
 
 ### 📌 Check Container IPs
 ```bash
-docker network inspect Kunal-bridge
+docker network inspect Vedang-bridge
 ```
 Expected Output:
 ```
- Kunal-database: 172.20.240.1
- Kunal-server-A: 172.20.240.2
+Vedang-database: 172.20.240.1
+Vedang-server-A: 172.20.240.2
 ```
 
 ---
 
 ## 📔 3. Testing Communication Between Containers
-### Ping from **Kunal-database** to **Kunal-server-A**
+### Ping from **Vedang-database** to **Vedang-server-A**
 ```bash
-docker exec -it Kunal-database ping 172.20.240.2
+docker exec -it Vedang-database ping 172.20.240.2
 ```
-### Ping from **Kunal-server-A** to **Kunal-database**
+### Ping from **Vedang-server-A** to **Vedang-database**
 ```bash
-docker exec -it Kunal-server-A ping 172.20.240.1
+docker exec -it Vedang-server-A ping 172.20.240.1
 ```
 ✅ Expected Outcome: Both containers should successfully **ping** each other.
 
 ---
 
 ## 🚧 4. Demonstrating Network Isolation with a Third Container
-We add another container (`Kunal-server-B`) on the **default bridge network**.
+We add another container (`Vedang-server-B`) on the **default bridge network**.
 ```bash
-docker run -itd --name=Kunal-server-B busybox
+docker run -itd --name=Vedang-server-B busybox
 ```
 ### 📌 Get IP of `Kunal-server-B`
 ```bash
-docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' Kunal-server-B
+docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' Vedang-server-B
 ```
 (Example IP: `172.17.0.2`)
 
 ---
 
 ## ❌ 5. Testing Communication Between Different Networks
-Ping from `Kunal-database` to `Kunal-server-B`:
+Ping from `Vedang-database` to `Vedang-server-B`:
 ```bash
-docker exec -it Kunal-database ping 172.17.0.2
+docker exec -it Vedang-database ping 172.17.0.2
 ```
 🚨 **Expected Outcome:** The ping should **fail**, as they are on different networks.
 
@@ -102,11 +102,11 @@ docker exec -it Kunal-database ping 172.17.0.2
 ## 🔍 6. Confirming Network Isolation
 ### Inspect Networks
 ```bash
-docker network inspect Kunal-bridge
+docker network inspect Vedang-bridge
 docker network inspect bridge
 ```
-✅ `Kunal-bridge` should contain `Kunal-database` & `Kunal-server-A`.
-✅ `bridge` should contain `Kunal-server-B`.
+✅ `Vedang-bridge` should contain `Vedang-database` & `Vedang-server-A`.
+✅ `bridge` should contain `Vedang-server-B`.
 
 ---
 
